@@ -1,0 +1,172 @@
+.body {
+    display: flex;
+    font-family: Helvetica;
+    overflow: hidden;
+    color: #FFF;
+    font-size: 17;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    /* opacity: 0.9; */
+    /* background-image: url("../pic/backgound.jpg"); */
+    background: #191919;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#salida::-webkit-scrollbar {
+    display: none;
+}
+
+#usuarios::-webkit-scrollbar {
+    display: none;
+}
+
+#salida {
+    scrollbar-width: none
+}
+
+#usuarios {
+    scrollbar-width: none
+}
+
+#mensaje {
+    width: calc(100% - 71px);
+    background: #393C41;
+    border: 2px;
+    padding: 6px;
+    color: #FFF;
+    font-size: 20;
+    margin-left: 1px;
+    margin-top: 45px; 
+}
+
+#tiempo {
+    font-size: 9;
+}
+
+.center {
+    width: 70%;
+    display: flex;
+}
+
+#usuarios {
+    width: 30%;
+    height: 100%;
+    overflow-y: scroll;
+    background: #393C41;
+    border: 2px;
+}
+
+.usuario {
+    height: 90px;
+    margin: 0px;
+    padding: (50% - 32px);
+    display: flex;
+}
+
+.usuario:hover {
+    background: #999;
+}
+
+#salida {
+    width: 100%;
+    height: calc(100% - 115px);
+    overflow-y: scroll;
+}
+
+.conversacion_izq, .conversacion_der {
+    display: inline-block;
+    max-width: 300px;
+    border-radius: 10px;
+    padding: 10px 10px 0px 10px;
+    word-wrap: break-word;
+}
+
+.conversacion_izq {
+    margin: 5px 10px 5px 50px;
+    background: #393C41;
+}
+
+.conversacion_der {
+    margin: 5px 50px 5px 15px;
+    background: #2763B6;
+}
+
+.conversacion_contenedor {
+    width: 100%;
+}
+
+#vacio {
+    height: 100%;
+}
+
+#entrada {
+    width: 70%;
+    height: 115px;
+    display: flex;
+    bottom: 0;
+    position: absolute;
+    color: #FFF;
+}
+
+.icono1, .icono2 {
+    width: 64px;
+    height: 64px;
+    margin: 13px 0px 13px 13px;
+    display: flex;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.icono1 {
+    background: url("../pic/me.jpg") center;
+    background-size: 64px 64px;
+}
+
+.icono2 {
+    background: url("../pic/peer.jpg") center;
+    background-size: 64px 64px;
+}
+
+.nombre {
+    align: center;
+    font-size: 30;
+    padding: 29px;
+}
+
+#boton {
+    width: 50px;
+    border-width: 0px;
+    cursor: pointer;
+    outline: none;
+    color: black;
+    padding: 13px 8px 28px 13px;
+    color: #FFF;
+    background: #393C41;
+    margin-top: 45px; 
+}
+
+#ruta:hover {
+    fill: "#ADBCEF"
+}
+
+::-webkit-input-placeholder {
+    color: #FFF;
+}
+
+input:-moz-placeholder, textarea:-moz-placeholder {
+    color:   #FFF;
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+    color:    #FFF;
+}
+
+*:focus {
+    outline: none;
+}
