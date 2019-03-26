@@ -1,4 +1,4 @@
 # Wason
 An simple home-made  instant messenger
 
-More functionalidad will be added.
+More functionalities will be added.
