@@ -42,12 +42,7 @@ var obtenerNombreUsuario = function() {
 window.setInterval(function() { websocket.send(msj2);}, 5000);
 
 var parseJson = function(str){
-    var tiempo = (new Date()).toLocaleTimeString(
-        navigator.language,
-        {hour: '2-digit', minute:'2-digit'})
-
-    tiempo = "<p id=\"tiempo\">" + tiempo + "<\/p>"
-    obj = JSON.parse(str);
+    var obj = JSON.parse(str);
 
     if(obj.peticion === "usuarios") {
         actualizarListaUsuario(
@@ -57,12 +52,12 @@ var parseJson = function(str){
         obj.peticion !== "msj_enviado" &&
         obj.peticion !== "registro") {
 
-        return " " + obj.detalles + tiempo;
+        return " " + obj.detalles;
     } else if(obj.tipo == "msj_nuevo") {
         return utf8ByteArrayToString(
-                decrypt(llave, window.atob(obj.msj))) + tiempo;
+            decrypt(llave, window.atob(obj.msj)));
     } else if(obj.tipo == "msj_chat") {
-        return  obj.msj + tiempo;
+        return  obj.msj;
     }
 }
 
@@ -70,7 +65,12 @@ var parseJson = function(str){
 var appendHtml = function(str, posicion) {
     var nuevaLinea = document.createElement('div');
     var nuevaConversacion = document.createElement('div');
+    var formatoTiempo = document.createElement('div');
     var strHtml = parseJson(str);
+
+    var tiempo = (new Date()).toLocaleTimeString(
+        navigator.language,
+        {hour: '2-digit', minute:'2-digit'})
 
     if (!strHtml) {
         return;
@@ -82,15 +82,19 @@ var appendHtml = function(str, posicion) {
         nuevaLinea.setAttribute("class", "conversacion_contenedor");
 
         if (posicion === "izq") {
+            tiempo = "<p id=\"tiempo_izq\">" + tiempo + "<\/p>";
             nuevaLinea.setAttribute("align", "left");
             nuevaConversacion.setAttribute("class", "conversacion_izq");
         } else {
+            tiempo = "<p id=\"tiempo_der\">" + tiempo + "<\/p>";
             nuevaLinea.setAttribute("align", "right");
             nuevaConversacion.setAttribute("class", "conversacion_der");
         }
 
+        formatoTiempo.innerHTML = tiempo;
         nuevaLinea.appendChild(nuevaConversacion);
         salida.appendChild(nuevaLinea);
+        salida.appendChild(formatoTiempo);
         salida.scrollTop = salida.scrollHeight;
     }
 }

@@ -41,8 +41,16 @@
     margin-top: 45px; 
 }
 
-#tiempo {
+#tiempo_izq {
     font-size: 9;
+    text-align: left;
+    margin-left: 50px;
+}
+
+#tiempo_der {
+    font-size: 9;
+    text-align: right;
+    margin-right: 50px;
 }
 
 .center {
@@ -79,17 +87,18 @@
     display: inline-block;
     max-width: 300px;
     border-radius: 10px;
-    padding: 10px 10px 0px 10px;
+    padding: 10px 10px 10px 10px;
     word-wrap: break-word;
+    text-align: left;
 }
 
 .conversacion_izq {
-    margin: 5px 10px 5px 50px;
+    margin: 5px 10px 0px 50px;
     background: #393C41;
 }
 
 .conversacion_der {
-    margin: 5px 50px 5px 15px;
+    margin: 5px 50px 0px 15px;
     background: #2763B6;
 }
 
