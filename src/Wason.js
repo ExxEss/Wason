@@ -8,12 +8,21 @@ var amigo;
 
 // color del elemento div que este el amigo
 var color = "#AAA";
-
-var websocket = new WebSocket("ws://18.220.235.202:7500/"),
+var websocket = conectar(),
     boton = document.getElementById('boton'),
     mensaje = document.getElementById('mensaje'),
     salida = document.getElementById('salida'),
     usuarios = document.getElementById('usuarios');
+
+websocket.onclose = function() {
+    window.setTimeout(function() {
+        conectar();
+    }, 1000);
+};
+
+function conectar() {
+    return new WebSocket("ws://18.220.235.202:7500/");
+}
 
 var obtenerNombreUsuario = function() {
     nombreUsuario = prompt("Registrarte con tu nombre");
