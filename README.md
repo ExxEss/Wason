@@ -4,4 +4,4 @@ More functionalities will be added.
 
 
 
-![Wason](/Users/EssExx/Desktop/Wason/pic/Wason.png)
+![Wason](/pic/Wason.png)
