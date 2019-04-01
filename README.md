@@ -5,5 +5,5 @@ More functionalities will be added.
 
 
 
-<img src="/pic/Wason.png" width="500" hegiht="400" align=center />
+<img src="/pic/Wason.png" width="700" hegiht="500" align=center />
 
