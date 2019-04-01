@@ -4,4 +4,4 @@ More functionalities will be added.
 
 
 
-![Wason](/pic/Wason.png)
+![Wason](/pic/Wason.png=200x300)
