@@ -4,4 +4,6 @@ More functionalities will be added.
 
 
 
-![Wason](/pic/Wason.png =200x300)
+
+<img src="/pic/Wason.png" width="300" hegiht="200" align=center />
+
